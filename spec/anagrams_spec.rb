@@ -44,7 +44,7 @@ describe('ana') do
   end
 
   it("checks for anagrams, antigrams and palindrome, on any string with 2 or more words") do
-   expect(ana("qwer asdof", "zxcav hjkil")).to(eq("Facinating, your phrases are antigrams!"))
+   expect(ana("qwer asdfy", "zxcvi hjklo")).to(eq("Facinating, your phrases are antigrams!"))
   end
 
 
