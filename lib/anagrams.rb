@@ -14,11 +14,10 @@ def ana(word1, word2)
   # check words are valid
   if (((word1.split("") & vowels).empty?) || ((word2.split("") & vowels).empty?))
     verdict = "I don't think those are all real words you silly mongoose... try again!"
-  elsif (((letters1_arr & letters2_arr).length) == letters1_arr.length) # check 2 words for anagram
+  elsif ( (((letters1_arr & letters2_arr).length) == letters1_arr.length) && (letters1_arr.length == letters2_arr.length)) # check 2 words for anagram
       verdict = "Cool, your words are an anagram!"
-    if ((letters1_arr + letters2_arr) == (letters1_arr + letters2_arr).reverse())  # check 2 words for palindrome
-      verdict = "Guess what, your words together form a palindrome!"
-    end
+  elsif ((letters1_arr + letters2_arr) == (letters1_arr + letters2_arr).reverse())  # check 2 words for palindrome
+    verdict = "Guess what, your words together form a palindrome!"
   elsif ((letters1_arr & letters2_arr).empty?) # check 2 words for antigram
     verdict = "Facinating, your words are antigrams!"
   else # nothing matches
