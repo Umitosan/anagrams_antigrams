@@ -12,7 +12,7 @@ describe('String#ana') do
   end
 
   it("checks to see if all the user's 2 words are anagrams") do
-   expect(ana("listen","silent")).to(eq("Cool, your words are anagrams!"))
+   expect(ana("listen","silent")).to(eq("Cool, your words are an anagram!"))
   end
 
 end
