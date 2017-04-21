@@ -24,7 +24,7 @@ describe('String#ana') do
   end
 
   it("checks if the words are a palindrome") do
-   expect(ana("Hamlet?","Am leth!")).to(eq("Guess what, your words together form a palindrome!"))
+   expect(ana("Top", "spot!")).to(eq("Guess what, your words together form a palindrome!"))
   end
 
 end

@@ -13,13 +13,13 @@ def ana(word1, word2)
   else # simple check for anagrams between two words
     if (((word1_arr & word2_arr).length) == word1_arr.length)
       verdict = "Cool, your words are an anagram!"
-      # if palindrom       # check to see if it's a palindrome
-      #   verdict =
-      # end
+      if ((word1_arr + word2_arr) == (word1_arr + word2_arr).reverse())  # check to see if it's a palindrome
+        verdict = "Guess what, your words together form a palindrome!"
+      end
     else
       verdict = "Sorry, that's not an anagram"
     end
-  end # END main if
+  end # main if
 
   return verdict
 end
