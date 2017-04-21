@@ -5,5 +5,5 @@ require('rspec')
 require('./lib/title_case')
 
 get('/') do
-  erb()
+  erb(:form1)
 end

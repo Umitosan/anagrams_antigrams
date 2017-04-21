@@ -6,17 +6,17 @@
 
 ## Description
 
-This web application checks a user's input to determine if it's an anagram or an antigram.
+This web application checks a user's words to determine if they are an anagram, antigram, or palindrome.
 
 ## Specifications
 
 | Behavior | Input | Output |
 |----------|-------|--------|
+| The program will verify the user's input is a valid word by checking the presence of vowel and notify the user if not valid | "qwrty lmp" | "I don't think those are all real words you silly mongoose... try again!" |
 | The program will verify that two words are anagrams  | "listen", "silent" | "Cool, your words are anagrams!" |
 | The program will ignore letter case | "Team", "Meat" | "Cool, your words are anagrams!" |
 | The Program will ignore spaces and punctuation | "Hamlet?", "Am leth!" | "Cool, your words are anagrams!" |
-| After verifying two words are in fact anagrams, the program will verify that the word(s) are a palindrome | "Top", "spot" | "Guess what, your words are also a palindrome!" |
-| The program will verify the user's input is a valid word by checking the presence of vowel and notify the user if not valid | "qwrty lmp" | "I don't think that's a word you silly mongoose... try again!" |
+| After verifying two words are in fact anagrams, the program will verify that the word(s) are a palindrome | "Top", "spot" | "Guess what, your words together are also a palindrome!" |
 | The program will check to see if the user's input is an "antigram", if not already found to be an anagram, by verifying that all letters in each word are different than the letters in each other word | "mango", "butter" | "Woah, your 2 words are antigrams!" |
 | The program will also perform these verify anagram and antigram conditions for multiple words as input | "Punishments", "Nine Thumps" | "That's an impressive anagram!" |
 
@@ -26,7 +26,7 @@ This web application checks a user's input to determine if it's an anagram or an
 
 ## Known Bugs
 
-no bugs as of now.
+There are no known bugs as of now, but surly the code is far from perfect.
 
 ## Support and contact details
 
