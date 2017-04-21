@@ -31,5 +31,12 @@ describe('ana') do
    expect(ana("mango", "butter")).to(eq("Facinating, your words are antigrams!"))
   end
 
+  it("checks for anagrams, antigrams and palindrome, on a set of strings longer than 1 word each") do
+   expect(ana("The public art galleries", "Large picture halls, I bet")).to(eq("Cool, your words are an anagram!"))
+  end
+
+  # it("checks for anagrams, antigrams and palindrome, on any string with 2 or more words") do
+  #  expect(ana("Was it Eliot's toilet I saw?")).to(eq("Guess what, your words together form a palindrome!"))
+  # end
 
 end
