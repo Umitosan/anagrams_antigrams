@@ -15,4 +15,8 @@ describe('String#ana') do
    expect(ana("listen","silent")).to(eq("Cool, your words are an anagram!"))
   end
 
+  it("is case-insensitive") do
+   expect(ana("Listen","Silent")).to(eq("Cool, your words are an anagram!"))
+  end
+
 end
