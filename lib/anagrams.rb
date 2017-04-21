@@ -3,22 +3,26 @@ def ana(word1, word2)
   verdict = "no verdict"
   vowels = ["a","e","i","o","u","y"]
 
-  # convert to arrays, reduce case, eliminate spaces and punctuation
-  word1_arr = word1.downcase().split("").select { |letter| letter =~ /[a-z]/ }
-  word2_arr = word2.downcase().split("").select { |letter| letter =~ /[a-z]/ }
+  # create arrays that:  reduce case, eliminate spaces and punctuation
+  letters1_arr = word1.downcase().split("").select { |letter| letter =~ /[a-z]/ }
+  letters2_arr = word2.downcase().split("").select { |letter| letter =~ /[a-z]/ }
 
-  # check both inputs are valid words
-  if ((word1_arr & vowels).empty?) || ((word2_arr & vowels).empty?)
+  # create arrays that preserve the word structure
+  # words1_arr =
+  # words2_arr =
+
+  # check words are valid
+  if ((letters1_arr & vowels).empty?) || ((letters2_arr & vowels).empty?)
     verdict = "I don't think those are all real words you silly mongoose... try again!"
-  else # simple check for anagrams between two words
-    if (((word1_arr & word2_arr).length) == word1_arr.length)
+  elsif (((letters1_arr & letters2_arr).length) == letters1_arr.length) # check 2 words for anagram
       verdict = "Cool, your words are an anagram!"
-      if ((word1_arr + word2_arr) == (word1_arr + word2_arr).reverse())  # check to see if it's a palindrome
-        verdict = "Guess what, your words together form a palindrome!"
-      end
-    else
-      verdict = "Sorry, that's not an anagram"
+    if ((letters1_arr + letters2_arr) == (letters1_arr + letters2_arr).reverse())  # check 2 words for palindrome
+      verdict = "Guess what, your words together form a palindrome!"
     end
+  elsif ((letters1_arr & letters2_arr).empty?) # check 2 words for antigram
+    verdict = "Facinating, your words are antigrams!"
+  else # nothing matches
+    verdict = "your words aren't that special after all :("
   end # main if
 
   return verdict

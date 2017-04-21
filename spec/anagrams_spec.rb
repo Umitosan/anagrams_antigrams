@@ -28,7 +28,7 @@ describe('ana') do
   end
 
   it("checks if the words an antigram") do
-   expect(ana("mango", "butter")).to(eq("Woah, your 2 words are antigrams!"))
+   expect(ana("mango", "butter")).to(eq("Facinating, your words are antigrams!"))
   end
 
 
