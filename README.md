@@ -16,7 +16,7 @@ This web application checks a user's words to determine if they are an anagram, 
 | The program will verify that two words are anagrams  | "listen", "silent" | "Cool, your words are an anagram!" |
 | The program will ignore letter case | "Team", "Meat" | "Cool, your words are anagrams!" |
 | The Program will ignore spaces and punctuation | "Hamlet?", "Am leth!" | "Cool, your words are anagrams!" |
-| After verifying two words are in fact anagrams, the program will verify that the word(s) are a palindrome | "Top", "spot" | "Guess what, your words together are also a palindrome!" |
+| After verifying two words are in fact anagrams, the program will check that if the words are a palindrome | "Top", "spot" | "Guess what, your words together form a palindrome!" |
 | The program will check to see if the user's input is an "antigram", if not already found to be an anagram, by verifying that all letters in each word are different than the letters in each other word | "mango", "butter" | "Woah, your 2 words are antigrams!" |
 | The program will also perform these verify anagram and antigram conditions for multiple words as input | "Punishments", "Nine Thumps" | "That's an impressive anagram!" |
 

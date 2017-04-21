@@ -3,7 +3,7 @@ def ana(word1, word2)
   verdict = "no verdict"
   vowels = ["a","e","i","o","u","y"]
 
-  # convert to arrays, handle case, handle spaces and punctuation
+  # convert to arrays, reduce case, eliminate spaces and punctuation
   word1_arr = word1.downcase().split("").select { |letter| letter =~ /[a-z]/ }
   word2_arr = word2.downcase().split("").select { |letter| letter =~ /[a-z]/ }
 
@@ -13,6 +13,9 @@ def ana(word1, word2)
   else # simple check for anagrams between two words
     if (((word1_arr & word2_arr).length) == word1_arr.length)
       verdict = "Cool, your words are an anagram!"
+      # if palindrom       # check to see if it's a palindrome
+      #   verdict =
+      # end
     else
       verdict = "Sorry, that's not an anagram"
     end
@@ -20,5 +23,3 @@ def ana(word1, word2)
 
   return verdict
 end
-
-# "string".index?(/\a/i) => nil
