@@ -19,4 +19,8 @@ describe('String#ana') do
    expect(ana("Listen","Silent")).to(eq("Cool, your words are an anagram!"))
   end
 
+  it("ignores all spaces and puncuation") do
+   expect(ana("Hamlet?","Am leth!")).to(eq("Cool, your words are an anagram!"))
+  end
+
 end
