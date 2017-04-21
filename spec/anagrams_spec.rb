@@ -11,8 +11,8 @@ describe('String#ana') do
    expect(ana("real", "qwrt")).to(eq("I don't think those are all real words you silly mongoose... try again!"))
   end
 
-  # it("checks to see if all the user's words are anagrams") do
-  #  expect(ana("","")).to(eq("Cool, your words are anagrams!"))
-  # end
+  it("checks to see if all the user's 2 words are anagrams") do
+   expect(ana("listen","silent")).to(eq("Cool, your words are anagrams!"))
+  end
 
 end
