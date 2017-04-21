@@ -28,7 +28,7 @@ describe('ana') do
   end
 
   it("checks if the words an antigram") do
-   expect(ana("mango", "butter")).to(eq("Facinating, your words are antigrams!"))
+   expect(ana("mango", "butter")).to(eq("Facinating, your phrases are antigrams!"))
   end
 
   it("checks for anagrams, antigrams and palindrome, on a set of strings longer than 1 word each") do
@@ -42,5 +42,11 @@ describe('ana') do
   it("checks for anagrams, antigrams and palindrome, on any string with 2 or more words") do
    expect(ana("Was it Eliot's", "toilet I saw?")).to(eq("Guess what, your words together form a palindrome!"))
   end
+
+  it("checks for anagrams, antigrams and palindrome, on any string with 2 or more words") do
+   expect(ana("qwer asdof", "zxcav hjkil")).to(eq("Facinating, your phrases are antigrams!"))
+  end
+
+
 
 end
