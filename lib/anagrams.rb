@@ -9,8 +9,8 @@ def ana(word1, word2)
   # create arrays that:  reduce case, eliminate spaces and punctuation
   letters1_arr = word1.downcase().split("").select { |letter| letter =~ /[a-z]/ }
   letters2_arr = word2.downcase().split("").select { |letter| letter =~ /[a-z]/ }
-
-  # check if all words are valid, populate all_words_clean_arr 
+# binding.pry
+  # check if all words are valid, populate all_words_clean_arr
   working_arr = (word1 + " " + word2).downcase().split()
   working_arr.each do |word|
     clean_word_arr = (word.split("").select { |letter| letter =~ /[a-z]/ })
@@ -23,7 +23,7 @@ def ana(word1, word2)
 
   if (all_words_valid == false)
     verdict = "I don't think those are all real words you silly mongoose... try again!"
-  elsif ((((letters1_arr & letters2_arr).length) == letters1_arr.length) && (letters1_arr.length == letters2_arr.length)) # check 2 phrases for anagram
+  elsif (letters1_arr.sort == letters2_arr.sort) # check 2 phrases for anagram
       verdict = "Cool, your words are an anagram!"
   # elsif ((letters1_arr + letters2_arr) == (letters1_arr + letters2_arr).reverse())  # check 2 phrases for palindrome
   elsif ((letters1_arr + letters2_arr) == (letters1_arr + letters2_arr).reverse())  # check 2 phrases for palindrome
@@ -38,8 +38,6 @@ def ana(word1, word2)
 end
 
 
-
-
-
+# elsif ((((letters1_arr & letters2_arr).length) == letters1_arr.length) && (letters1_arr.length == letters2_arr.length))
 
 # if (((word1.split("") & vowels).empty?) || ((word2.split("") & vowels).empty?))
