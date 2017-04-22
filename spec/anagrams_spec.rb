@@ -47,6 +47,4 @@ describe('ana') do
    expect(ana("qwer asdfy", "zxcvi hjklo")).to(eq("Facinating, your phrases are antigrams!"))
   end
 
-
-
 end

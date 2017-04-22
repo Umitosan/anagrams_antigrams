@@ -1,7 +1,5 @@
 
 def ana(word1, word2)
-  word1 = word1.to_s
-  word2 = word2.to_s
   verdict = "no verdict"
   vowels = ["a","e","i","o","u","y"]
   all_words_valid = true
